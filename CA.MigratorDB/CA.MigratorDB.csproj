@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="SQLScripts\BeforeDeployment\" />
+    <Folder Include="SQLScripts\Deployment\" />
+    <Folder Include="SQLScripts\PostDeployment\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dbup-core" Version="5.0.10" />
+    <PackageReference Include="dbup-mysql" Version="5.0.10" />
+    <PackageReference Include="dbup-sqlserver" Version="5.0.8" />
+  </ItemGroup>
+
+</Project>

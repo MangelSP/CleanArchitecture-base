@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,7 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+       <!--Carpeta y archivos adicionales que se hace deben de publicar cuando es modo Debug o Release-->
+	<ItemGroup>
+		<None Update="AppSettings.json" CopyToOutputDirectory="Always" CopyToPublishDirectory="Always"></None>
+	</ItemGroup>
+	
   <ItemGroup>
     <Folder Include="SQLScripts\BeforeDeployment\" />
     <Folder Include="SQLScripts\Deployment\" />
@@ -17,6 +21,14 @@
     <PackageReference Include="dbup-core" Version="5.0.10" />
     <PackageReference Include="dbup-mysql" Version="5.0.10" />
     <PackageReference Include="dbup-sqlserver" Version="5.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
   </ItemGroup>
 
 </Project>

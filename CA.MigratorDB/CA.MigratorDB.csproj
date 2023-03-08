@@ -10,12 +10,6 @@
 	<ItemGroup>
 		<None Update="AppSettings.json" CopyToOutputDirectory="Always" CopyToPublishDirectory="Always"></None>
 	</ItemGroup>
-	
-  <ItemGroup>
-    <Folder Include="SQLScripts\BeforeDeployment\" />
-    <Folder Include="SQLScripts\Deployment\" />
-    <Folder Include="SQLScripts\PostDeployment\" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="dbup-core" Version="5.0.10" />
